@@ -111,8 +111,10 @@ SELECT *
                          FROM salesman
                          WHERE name = 'Paul Adam');
 
+-- this creates a table of all the orders associated with Paul Adam
 
-/* 2. Explain in plain English in one sentence what is the output of the folloiwng block of SQL commands: *.'
+
+/* 2. Explain in plain English in one sentence what is the output of the folloiwng block of SQL commands: */
 
 SELECT *
   FROM orders
@@ -120,7 +122,7 @@ SELECT *
                          FROM salesman
                          WHERE city = 'London');
 
-
+-- this creates a table of all the orders asssociated with the London salesman
 
 
 /* 3 (bonus). Explain in plain English in one sentence what is the output of the folloiwng block of SQL commands: */
@@ -132,4 +134,7 @@ SELECT ord_date,
   HAVING SUM(purch_amt) > (SELECT MAX(purch_amt) + 1000
                              FROM orders b
                              WHERE a.ord_date = b.ord_date);
+
+-- this creates a table of the total order amount on a day (from order a)
+-- for any day which has a higher total than the highest order b amount plus 1000
 
