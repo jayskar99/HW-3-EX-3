@@ -112,6 +112,9 @@ SELECT s.name,
   INNER JOIN customer c
     ON s.city = c.city;
 
+-- this will create a table of each salesman, their city of business and 
+-- the customer they have there
+
 
 
 /* 2. Explain in plain English in one sentence what is the output of the folloiwng block of SQL commands: */
@@ -124,4 +127,7 @@ SELECT c.cust_name AS "Customer Name",
   INNER JOIN salesman s
     ON c.salesman_id = s.salesman_id
   WHERE s.commission > 0.12;
+
+-- this will create a table of the customer, city, salesman, and commission 
+-- for any salesman with more than .12 comission
 
